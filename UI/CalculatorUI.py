@@ -80,6 +80,16 @@ class UiMainWindow(object):
                                        )
         self.display_box.setContentsMargins(0, 0, 5, 3)
         self.gridLayout.addWidget(self.display_box, 0, 0, 1, 4)
+        # 输入模式显示框
+        self.mode_display_box = QtWidgets.QLabel(self.gridLayoutWidget)
+        self.mode_display_box.setObjectName("mode_display_box")
+        self.mode_display_box.setFixedHeight(70)
+        self.mode_display_box.setText("Angle")  # 设置显示框默认显示内容
+        self.mode_display_box.setAlignment(QtCore.Qt.AlignCenter)
+        self.mode_display_box.setStyleSheet("color: rgb(245,222,179);"
+                                            "font: 300 18pt \"Arial\";"
+                                            )
+        self.gridLayout.addWidget(self.mode_display_box, 1, 0, 1, 1)
         # 三角函数按钮
         self.sin_button = TrigonometricButton(self.gridLayoutWidget)
         self.sin_button.setObjectName("sin_button")
@@ -143,7 +153,7 @@ class UiMainWindow(object):
         # 模式选择按钮
         self.mode_button = FunctionButton(self.gridLayoutWidget)
         self.mode_button.setObjectName("mode_button")
-        self.gridLayout.addWidget(self.mode_button, 1, 0, 1, 2)
+        self.gridLayout.addWidget(self.mode_button, 1, 1, 1, 1)
         MainWindow.setCentralWidget(self.centralwidget)
 
         self.retranslateUi(MainWindow)
