@@ -140,11 +140,10 @@ class UiMainWindow(object):
         self.sign_button = FunctionButton(self.gridLayoutWidget)
         self.sign_button.setObjectName("sign_button")
         self.gridLayout.addWidget(self.sign_button, 5, 0, 1, 1)
-        MainWindow.setCentralWidget(self.centralwidget)
         # 模式选择按钮
         self.mode_button = FunctionButton(self.gridLayoutWidget)
-        self.mode_button.setObjectName("sign_button")
-        self.gridLayout.addWidget(self.sign_button, 1, 0, 1, 2)
+        self.mode_button.setObjectName("mode_button")
+        self.gridLayout.addWidget(self.mode_button, 1, 0, 1, 2)
         MainWindow.setCentralWidget(self.centralwidget)
 
         self.retranslateUi(MainWindow)
@@ -169,6 +168,6 @@ class UiMainWindow(object):
         self.number_1_button.setText(_translate("MainWindow", "1"))
         self.number_3_button.setText(_translate("MainWindow", "3"))
         self.number_4_button.setText(_translate("MainWindow", "4"))
-        self.del_button.setText(_translate("MainWindow", "del"))
+        self.del_button.setText(_translate("MainWindow", "←"))
         self.sign_button.setText(_translate("MainWindow", "+/-"))
         self.mode_button.setText(_translate("MainWindow", "mode"))
