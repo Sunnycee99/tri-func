@@ -4,27 +4,27 @@ from PyQt5.QtWidgets import QMainWindow, QApplication
 
 
 def cos(num, mode):
-    mystr = "cos--mode: %d, num: %f" % (mode, num)
+    mystr = "cos--mode: %s, num: %f" % (mode, num)
     print(mystr)
-    return mystr
+    return num
 
 
 def sin(num, mode):
-    mystr = "sin--mode: %d, num: %f" % (mode, num)
+    mystr = "sin--mode: %s, num: %f" % (mode, num)
     print(mystr)
-    return mystr
+    return num
 
 
 def arcsin(num):
     mystr = "arcsin--num: %f" % num
     print(mystr)
-    return mystr
+    return num
 
 
 def arctan(num):
     mystr = "arctan--num: %f" % num
     print(mystr)
-    return mystr
+    return num
 
 
 class MainWindow(QMainWindow):
@@ -32,7 +32,7 @@ class MainWindow(QMainWindow):
         super(MainWindow, self).__init__(parent=None)
         self.ui = UiMainWindow()
         self.ui.setup_ui(self)
-        self.mode = 0  # 标志位，0-角度模式 1-弧度模式
+        self.mode = False  # 标志位，False-角度模式 True-弧度模式
         self.is_compute = False  # 标志位，是否进行了运算
         self.is_error = False  # 标志位，运算是否出错，出错了运算按钮将锁死
         self.ui.number_0_button.clicked.connect(lambda: self.display_number(0))
@@ -61,10 +61,10 @@ class MainWindow(QMainWindow):
         :return: None
         """
         self.mode = ~self.mode
-        if self.mode == 0:
-            self.ui.mode_display_box.setText("Angle")
-        else:
+        if self.mode:
             self.ui.mode_display_box.setText("Radia")
+        else:
+            self.ui.mode_display_box.setText("Angle")
 
     def str_to_number(self):
         """
