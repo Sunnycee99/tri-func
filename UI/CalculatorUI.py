@@ -83,16 +83,16 @@ class UiMainWindow(object):
         # 三角函数按钮
         self.sin_button = TrigonometricButton(self.gridLayoutWidget)
         self.sin_button.setObjectName("sin_button")
-        self.gridLayout.addWidget(self.sin_button, 1, 0, 1, 1)
+        self.gridLayout.addWidget(self.sin_button, 2, 3, 1, 1)
         self.cos_button = TrigonometricButton(self.gridLayoutWidget)
         self.cos_button.setObjectName("cos_button")
-        self.gridLayout.addWidget(self.cos_button, 1, 1, 1, 1)
+        self.gridLayout.addWidget(self.cos_button, 3, 3, 1, 1)
         self.arctan_button = TrigonometricButton(self.gridLayoutWidget)
         self.arctan_button.setObjectName("arctan_button")
-        self.gridLayout.addWidget(self.arctan_button, 1, 2, 1, 1)
+        self.gridLayout.addWidget(self.arctan_button, 4, 3, 1, 1)
         self.arcsin_button = TrigonometricButton(self.gridLayoutWidget)
         self.arcsin_button.setObjectName("arcsin_button")
-        self.gridLayout.addWidget(self.arcsin_button, 1, 3, 1, 1)
+        self.gridLayout.addWidget(self.arcsin_button, 5, 3, 1, 1)
         # 数字按钮0-9
         self.number_0_button = NumberButton(self.gridLayoutWidget)
         self.number_0_button.setObjectName("number_0_button")
@@ -131,15 +131,20 @@ class UiMainWindow(object):
         # 复位按钮
         self.reset_button = FunctionButton(self.gridLayoutWidget)
         self.reset_button.setObjectName("reset_button")
-        self.gridLayout.addWidget(self.reset_button, 2, 3, 2, 1)
+        self.gridLayout.addWidget(self.reset_button, 1, 2, 1, 1)
         # 清除按钮
         self.del_button = FunctionButton(self.gridLayoutWidget)
         self.del_button.setObjectName("del_button")
-        self.gridLayout.addWidget(self.del_button, 4, 3, 2, 1)
+        self.gridLayout.addWidget(self.del_button, 1, 3, 1, 1)
         # +/-按钮
         self.sign_button = FunctionButton(self.gridLayoutWidget)
         self.sign_button.setObjectName("sign_button")
         self.gridLayout.addWidget(self.sign_button, 5, 0, 1, 1)
+        MainWindow.setCentralWidget(self.centralwidget)
+        # 模式选择按钮
+        self.mode_button = FunctionButton(self.gridLayoutWidget)
+        self.mode_button.setObjectName("sign_button")
+        self.gridLayout.addWidget(self.sign_button, 1, 0, 1, 2)
         MainWindow.setCentralWidget(self.centralwidget)
 
         self.retranslateUi(MainWindow)
@@ -166,3 +171,4 @@ class UiMainWindow(object):
         self.number_4_button.setText(_translate("MainWindow", "4"))
         self.del_button.setText(_translate("MainWindow", "del"))
         self.sign_button.setText(_translate("MainWindow", "+/-"))
+        self.mode_button.setText(_translate("MainWindow", "mode"))
