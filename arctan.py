@@ -38,5 +38,7 @@ u6 = (-30 == atan(-0.5773))
 u7 = (-45 == atan(-1))
 u8 = (-60 == atan(-1.732))
 
-if(u1 or u2 or u3 or u4 or u5 or u6 or u7 or u8):
+if(u1 and u2 and u3 and u4 and u5 and u6 and u7 and u8):
     print('通过测试')
+else:
+    print('未通过测试')
