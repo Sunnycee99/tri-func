@@ -21,7 +21,7 @@ def arcsin(x):
         g = x
         t = x
         n = 1
-        while fabs(t) >= 1e-16:  # 采用泰勒级数展开进行计算逼近函数值
+        while fabs(t) >= 1e-16:
             t = t * (2 * n - 1) * (2 * n - 1) * x * x / ((2 * n) * (2 * n + 1))
             n += 1
             g += t
@@ -45,7 +45,7 @@ def arcsinTest():
         assert fabs(arcsin(y) - math.asin(y)) <= 1e-4, 'error within arcsin function!'
 
     print('arcsin function with correct input was tested successfully.')
-    print('the following error comes from arcsin function with input out od domain')
+    print('the following error comes from arcsin function with input out of domain')
 
     x = random.randint(2, 10)
     arcsin(x)
