@@ -2,29 +2,10 @@ import sys
 from UI.CalculatorUI import UiMainWindow
 from PyQt5.QtWidgets import QMainWindow, QApplication
 
-
-def cos(num, mode):
-    mystr = "cos--mode: %s, num: %f" % (mode, num)
-    print(mystr)
-    return num
-
-
-def sin(num, mode):
-    mystr = "sin--mode: %s, num: %f" % (mode, num)
-    print(mystr)
-    return num
-
-
-def arcsin(num):
-    mystr = "arcsin--num: %f" % num
-    print(mystr)
-    return num
-
-
-def arctan(num):
-    mystr = "arctan--num: %f" % num
-    print(mystr)
-    return num
+from sin import sin
+from cos import cos
+from arcsin import arcsin
+from arctan import arctan
 
 
 class MainWindow(QMainWindow):
