@@ -16,7 +16,7 @@ def arcsin(x):
     """
 
     if not (-1 <= x <= 1):
-        raise RuntimeError('input out of domain!')
+        return False
     else:
         g = x
         t = x
@@ -45,10 +45,10 @@ def arcsinTest():
         assert fabs(arcsin(y) - math.asin(y)) <= 1e-4, 'error within arcsin function!'
 
     print('arcsin function with correct input was tested successfully.')
-    print('the following error comes from arcsin function with input out of domain')
+    print('the following False comes from arcsin function with input out of domain')
 
     x = random.randint(2, 10)
-    arcsin(x)
+    print(arcsin(x))
 
 
 arcsinTest()
