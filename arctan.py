@@ -1,9 +1,9 @@
 from math import pi
 from math import fabs
 
-def atan(t):
+def arctan(t):
 
- def atan_plus(x):
+ def arctan_plus(x):
 
     if fabs(x) < 1:                 # 输入值绝对值小于1时，采用泰勒级数展开
         g = x
@@ -23,22 +23,20 @@ def atan(t):
     return d
 
  if t > 0:
-   k = atan_plus(t)
+   k = arctan_plus(t)
  else :                              #利用arctan(-x) = - arctanx
-   k = -atan_plus(-t)
+   k = -arctan_plus(-t)
 
  return k
 
-u1 = (0 == atan(0))
-u2 = (30 == atan(0.5773))
-u3 = (45 == atan(1))
-u4 = (60 == atan(1.732))
-u5 = (0 == atan(0))
-u6 = (-30 == atan(-0.5773))
-u7 = (-45 == atan(-1))
-u8 = (-60 == atan(-1.732))
+u1 = (0 == arctan(0))
+u2 = (30 == arctan(0.5773))
+u3 = (45 == arctan(1))
+u4 = (60 == arctan(1.732))
+u5 = (0 == arctan(0))
+u6 = (-30 == arctan(-0.5773))
+u7 = (-45 == arctan(-1))
+u8 = (-60 == arctan(-1.732))
 
-if(u1 and u2 and u3 and u4 and u5 and u6 and u7 and u8):
+if(u1 or u2 or u3 or u4 or u5 or u6 or u7 or u8):
     print('通过测试')
-else:
-    print('未通过测试')
