@@ -9,7 +9,7 @@ def arcsin(x):
     The implementation of arcsin function.
 
     Args:
-        x: input radian value to be calculated.
+        x: input value (should be within the range of -1 to 1 ) to be calculated.
 
     Returns:
         The radian result of the arcsin calculation.
