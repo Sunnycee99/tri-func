@@ -17,6 +17,8 @@ def arcsin(x):
 
     if not (-1 <= x <= 1):
         return False
+    elif fabs(x) == 1:
+        return x * 90
     else:
         g = x
         t = x
@@ -26,7 +28,7 @@ def arcsin(x):
             n += 1
             g += t
 
-        return round(g, 4)
+        return round(g * 180 / pi, 4)
 
 
 def arcsinTest():
@@ -41,9 +43,10 @@ def arcsinTest():
         x = random.random()
         y = -random.random()
 
-        assert fabs(arcsin(x) - math.asin(x)) <= 1e-4, 'error within arcsin function!'
-        assert fabs(arcsin(y) - math.asin(y)) <= 1e-4, 'error within arcsin function!'
-
+        assert fabs(arcsin(x) - math.asin(x) * 180 / pi) <= 1e-4, 'error within arcsin function!'
+        assert fabs(arcsin(y) - math.asin(y) * 180 / pi) <= 1e-4, 'error within arcsin function!'
+    assert fabs(arcsin(1) - math.asin(1) * 180 / pi) <= 1e-4, 'error within arcsin function!'
+    assert fabs(arcsin(-1) - math.asin(-1) * 180 / pi) <= 1e-4, 'error within arcsin function!'
     print('arcsin function with correct input was tested successfully.')
     print('the following False comes from arcsin function with input out of domain')
 
