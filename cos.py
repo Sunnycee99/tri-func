@@ -18,7 +18,7 @@ def factorial(a):
     a-=1
   return b
   
-def taylor(x,model):
+def taylor(x,mode):
   """
   进行泰勒级数展开式计算
 
@@ -30,7 +30,7 @@ def taylor(x,model):
   """
   a=1
   n=50
-  if model:
+  if mode:
     x=x  
   else:
     x = x/180*(math.pi)   # 转换为弧度
@@ -43,7 +43,7 @@ def taylor(x,model):
     count+=1
   return a
   
-def cos(x,model=False):
+def cos(x,mode=False):
    """
    定义cos计算接口
 
@@ -53,7 +53,7 @@ def cos(x,model=False):
    返回：
      计算的结果，保留3位小数
    """
-   return round(taylor(x,model),3)
+   return round(taylor(x,mode),3)
 
 
 def cos_test():
@@ -96,7 +96,7 @@ def cos_test():
         #print(x2)
         if x1==x2:
             num=num+1
-        #print('-----------')
+        #print('-------------')
 
     #print(cos(314,True))
     #print(round(math.cos(314),3))
