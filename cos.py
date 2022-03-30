@@ -96,7 +96,7 @@ def cos_test():
         #print(x2)
         if x1==x2:
             num=num+1
-        #print('-------------')
+        #print('-----------')
 
     #print(cos(314,True))
     #print(round(math.cos(314),3))
